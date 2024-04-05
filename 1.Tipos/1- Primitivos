@@ -18,8 +18,8 @@ print(f"Idade: {idade}")
 print(f"Peso: {peso:.1f}")
 
 #Verificar se é maior ou menor de Idade
-if idade >=18:
-    input("Maior de Idade")
+if idade < 18 or idade >=65:
+    print("Não Precisa votar")
 
 else:
-    input("Menor de Idade")
+    print("Precisa Votar")
