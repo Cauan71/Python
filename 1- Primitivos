@@ -1,0 +1,22 @@
+#comando para limpar a tela
+import os
+
+os.system("clear")
+
+#input = entrada p usuário
+nome = input("Digite seu Nome: ")
+idade = int(input("Digite sua Idade: "))
+peso = float(input("Digite seu peso: "))
+
+print(f"\n")
+
+#resultado 
+print(f"Nome: {nome}")
+print(f"Idade: {idade}")
+print(f"Peso: {peso:.1f}")
+
+if idade >=18:
+    input("Maior de Idade")
+
+else:
+    input("Menor de Idade")
