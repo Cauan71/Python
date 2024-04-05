@@ -10,8 +10,6 @@ nota2= float(input("Digite sua 2ª nota: "))
 nota3 = float(input("Digite sua 3ª nota: "))
 nota4 = float(input("Digite sua 4ª nota: "))
 
-media : float=0
-soma: float=0
 
 soma = nota1+nota2+nota3+nota4
 media = soma/4
