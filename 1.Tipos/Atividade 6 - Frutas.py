@@ -16,11 +16,16 @@ if qmaca <5:
 else:
     precoMaca = 1.50
 
-valorFrutas = qmorango+qmaca
+somaMorango = qmorango*precoMorango
+somaMaca = qmaca*qmorango
+
+valorFrutas = somaMorango+somaMaca
 valorReais = float
 
 
 
 if valorFrutas > 8 or valorReais > 25:
     desconto = 0.01
+
+print("Valor Total a pagar: ",)
 
