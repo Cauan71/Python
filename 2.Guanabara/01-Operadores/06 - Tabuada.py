@@ -4,6 +4,7 @@ os.system("cls || clear")
 
 numero = int(input("Digite um Número : "))
 
+print("="*15)
 print(numero, "x 1 = ",numero*1)
 print(numero, "x 2 = ",numero*2)
 print(numero, "x 3 = ",numero*3)
@@ -14,6 +15,7 @@ print(numero, "x 7 = ",numero*7)
 print(numero, "x 8 = ",numero*8)
 print(numero, "x 9 = ",numero*9)
 print(numero, "x 10 = ",numero*10)
+print("="*15)
 
 
 #parei no exercicio 10 para fazer

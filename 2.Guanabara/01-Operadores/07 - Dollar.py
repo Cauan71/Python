@@ -2,12 +2,7 @@ import os
 
 os.system("cls || clear")
 
-dollar = float = 3.27
+real = float(input("Digite quanto de dinheiro você tem: R$ "))
+dolar = real/3.27
 
-valor = int(input("Digite o valor em R$ a ser convertido em Dollar $ : "))
-conversao = valor*dollar
-
-os.system("cls|| clear")
-
-print("====== Conversão =======")
-print("Valor Convertido: $",conversao)
+print("Com R$ {:.2f} você pode comprar US$ {:.2f}".format(real,dolar))
