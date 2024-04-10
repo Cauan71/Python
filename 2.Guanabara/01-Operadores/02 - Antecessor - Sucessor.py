@@ -11,4 +11,4 @@ os.system("cls || clear")
 
 print("\nNúmero Digitado: ",numero)
 print("Antecessor : ",antecessor)
-print("Sucessor: ",successor)
+print("Sucessor: ",successor) 
