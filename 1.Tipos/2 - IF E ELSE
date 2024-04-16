@@ -5,8 +5,12 @@ os.system("cls || clear")
 nota = float 
 
 #obtendo dados do usuário
+# Tipagem dinâmica
 nota = float(input("Digite sua Nota:"))
 
+#Tipagem estática
+#nota: float
+#nota = float(input("Digite sua nota: "))
 
 #termo de condição
 if(nota>=7):
