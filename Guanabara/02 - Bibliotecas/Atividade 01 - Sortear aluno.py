@@ -13,13 +13,12 @@ lista = [n1,n2,n3,n4]
 
 escolhido = random.choice(lista)
 
-print("Aluno(a) escolhido(a): {}".format(escolhido))
+#print("Aluno(a) escolhido(a): {}".format(escolhido))
 
 
 #embaralhar ordem dos alunos
-'''
+
 random.shuffle(lista)
 print("Ordem de Apresentação: ")
 print(lista)
 
-'''
