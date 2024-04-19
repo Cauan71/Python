@@ -7,7 +7,7 @@ soma: int = 0
 lista = []
 
 for i in range(10):
-    numero = int(input(f"Digite o {i+1} número: "))
+    numero = int(input(f"Digite o {i+1}ª número: "))
     lista.append(numero)
 
     if numero < 0:
