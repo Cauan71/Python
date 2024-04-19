@@ -3,8 +3,8 @@ import os
 os.system("cls || clear")
 
 contador: int = 0 
-menorIdade: int = 9999
-maiorIdade: int = 0
+menorIdade = 9999
+maiorIdade = 0
 somarSalario: float = 0
 mediaSalario: float =0 
 contadorSalario: int = 0
@@ -37,8 +37,8 @@ while True:
         if idade < menorIdade:
             menorIdade = idade
             
-        print("Maior Idade: ",maiorIdade)
-        print("Menor Idade: ", menorIdade)
+        print(f"Maior Idade: {maiorIdade}")
+        print(f"Menor Idade: {menorIdade}")
         
         if sexo == 'f' and salario > 5000:
             contador = contador + 1
