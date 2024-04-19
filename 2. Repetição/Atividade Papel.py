@@ -27,7 +27,7 @@ while True:
         os.system("cls || clear")
         
     if opcao == 2:
-        somarSalario += salario
+        somarSalario = somarSalario + salario
         mediaSalario = somarSalario/contadorSalario
         print("Média Salarial: {}".format(mediaSalario))
         
@@ -37,8 +37,8 @@ while True:
         if idade < menorIdade:
             menorIdade = idade
             
-        print("Maior Idade: {}".format(maiorIdade))
-        print("Menor Idade: {}".format(menorIdade))
+        print("Maior Idade: ",maiorIdade)
+        print("Menor Idade: ", menorIdade)
         
         if sexo == 'f' and salario > 5000:
             contador = contador + 1
