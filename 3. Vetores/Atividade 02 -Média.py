@@ -17,7 +17,7 @@ for i in range(4):
 
 for i in range(len(notas)):
     print(f"{i+1}ª Nota: {notas[i]}")
-print("Média:{}".format(media)) 
+print("Média:{:.2f}".format(media)) 
 
 
 if media >= 7:

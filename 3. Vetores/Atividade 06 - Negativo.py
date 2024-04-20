@@ -16,5 +16,5 @@ for i in range(10):
     if numero > 0:
         soma = soma+numero
 
-print("Soma dos Números Positivos: {}".format(soma))
+print("\nSoma dos Números Positivos: {}".format(soma))
 print("Quantidade de Números Negativos: {}".format(negativos))

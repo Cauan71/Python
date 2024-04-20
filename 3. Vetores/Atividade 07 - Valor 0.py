@@ -1,16 +1,16 @@
 import os
 
 os.system("cls || clear")
-
+SIZE = 5
 lista = []
 
-for i in range(5):
+for i in range(SIZE):
     numero = int(input("Digite um número: "))
     lista.append(numero)
 
-    if numero < 0:
-        numero = 0
+    if lista[i] < 0:
+        lista[i] = 0
 
-for i in range(5):
+for i in range(SIZE):
     print(f"{i+1}ª número : {lista[i]}")
 

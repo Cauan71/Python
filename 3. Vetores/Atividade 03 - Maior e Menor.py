@@ -17,6 +17,6 @@ for i in range(5):
         menorNumero = numero
 
 for i in range(5):
-    print(f"\n{i+1} Número: {lista[i]}")
+    print(f"{i+1} Número: {lista[i]}")
 print(f"Maior Número: {maiorNumero}")
 print(f"Menor Número: {menorNumero}")
