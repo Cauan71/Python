@@ -58,20 +58,23 @@ for i in range(SIZE):
 
 somaTotal = somaPar+somarImpar
 mediaTotal = somaTotal/contador
+os.system("cls || clear")
 
+print("="*15, " M E N U ","="*15)
+print("Maior Número: {}".format(maiorNumero))
+print("Menor Número: {}".format(menorNumero))
 print("Quantidade de Números Pares: {}".format(pares))
 print("Quantidade de Números Ímpares: {}".format(impares))
 print("Quantidade de Números Positivos: {}".format(positivo))
 print("Quantidade de Números Negativos: {}".format(negativo))
 print("Quantidade de Números Inseridos: {}".format(contador))
-print("Maior Número: {}".format(maiorNumero))
-print("Menor Número: {}".format(menorNumero))
-print("Média dos Números Pares: {}".format(mediaPar))
-print("Média dos Números Ímpares: {}".format(mediaImpar))
-print("Média Total: {}".format(mediaTotal))
+print("Média dos Números Pares: {:.1f}".format(mediaPar))
+print("Média dos Números Ímpares: {:.1f}".format(mediaImpar))
+print("Média Total: {:.1f}".format(mediaTotal))
+print("="*42)
 
+print("Números Inversos: ")
 for i in range(SIZE-1, -1 , -1):
     print(f"{i+1}ª Número : {lista[i]}")
-
 
 
