@@ -13,20 +13,22 @@ while True:
         numero = int(input(f"Digite um número: "))
         contador = contador + 1
         
-        if numero %2 == 0:
-            pares = pares + 1
-        else:
-            impares = impares + 1
         
-        if numero >= 0:
-            positivo = positivo + 1
-        else:
-            negativo = negativo + 1
+        if numero > 0:
+            
+            if numero %2 == 0:
+                pares = pares + 1
+            else:
+                impares = impares + 1
+        
+            if numero >= 0:
+                positivo = positivo + 1
+            else:
+                negativo = negativo + 1
     
         if numero == 0:
             break
         
-os.system("cls || clear")
 
 
 print("="*5, " R E S U L T A D O ", "="*5)
