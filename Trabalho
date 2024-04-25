@@ -1,0 +1,94 @@
+import os
+
+os.system("cls || clear")
+aVista = 0.10
+cartao = 0.10
+
+desconto:int
+valorTotal:float
+total: float
+acrescimo: float
+contador: int = 0 
+prato: str
+lista = []
+
+def menu():
+    print("="*5," M E N U ", "="*5)
+    print("1 - Lasanha")
+    print("2 - Arroz com Feijão")
+    print("3 - Strogonoff")
+    print("4 - Escondidinho de Carne")
+    print("5 - Muqueca de Peixe")
+    print("6 - Quiabada")
+    print("7 - Pirão")
+    print("0 - Sair do Cardápio ")
+    print("="*25)
+    
+def pagar():
+    print("="*5, "PAGAMENTO", "="*5)
+    print("1 - Á Vista ( 10% Desconto )")
+    print("2 - Cartão de Crédito ( 10% Acréscimo )")
+    
+while True:
+    menu()
+    opcao = int(input("Escolha a opção desejada: "))
+    os.system("cls || clear")
+    
+    if opcao == 1:
+        print("Você escolheu ( 1 - Lasanha = R$ 15,00) ")
+        contador = contador + 15
+        prato = "Lasanha"
+        
+    if opcao == 2:
+        print("Você escolheu ( 2 - Arroz com Feijão = R$ 5,00) ")
+        contador = contador + 5
+        prato = "Arroz com Feijão"
+    
+    if opcao == 3:
+        print("Você escolheu ( 3 - Strogonoff = R$ 15,00) ")
+        contador = contador + 15
+        prato = "Strogonoff"
+    
+    if opcao == 4:
+        print("Você escolheu ( 4 - Escondidinho de Carne = R$ 7,00) ")
+        contador = contador + 7
+        prato = "Escondidinho"
+    
+    if opcao == 5:
+        print("Você escolheu ( 5 - Muqueca de Peixe = R$ 8,00) ")
+        contador = contador + 8
+        prato = "Muqueca"    
+    if opcao == 6:
+        print("Você escolheu ( 6 - Quiabada = R$ 6,00) ")
+        contador = contador + 6
+        prato = "Quiabada"
+    if opcao == 7:
+        print("Você escolheu ( 7 - Pirão = R$ 7,00) ")
+        contador = contador + 7
+        prato = "Pirão"
+
+    if opcao == 0 :
+        pagar()
+        pagamento = int(input("Escolha a forma de pagamento: "))
+        if pagamento == 1:
+            desconto = valorTotal * aVista
+            total = valorTotal - desconto
+            os.system("cls || clear")
+            print("="*5," M E N U ", "="*5)
+            print("Irá pagar {}".format(total))
+            
+            print("Prato Escolhido: {}".format(lista[i]))
+            print("="*25)
+            
+        if pagamento == 2:
+            acrescimo = valorTotal * cartao
+            total = valorTotal + acrescimo
+            os.system("cls || clear")
+            print("="*5," M E N U ", "="*5)
+            print("Irá Pagar com Acrescimo: {}".format(total))
+            print("Prato Escolhido: {}".format(lista[i]))
+            print("="*25)
+        break
+    
+    
+
