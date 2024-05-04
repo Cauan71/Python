@@ -1,4 +1,5 @@
 import os
+import time
 
 class Reserva:
     def __init__(self, numero_aviao, nome_passageiro):
@@ -109,7 +110,9 @@ while True:
         consulta_passageiro()
 
     elif opcao == 6:
+        os.system("cls || clear")
         print("Encerrando o programa...")
+        time.sleep(3)
         break
     else:
         print("Opção Inválida !! Por favor, escolha uma opção válida.")
