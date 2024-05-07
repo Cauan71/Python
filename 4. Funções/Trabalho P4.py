@@ -68,8 +68,9 @@ def consulta_passageiro():
     nome_passageiro = input("Digite o nome do passageiro que deseja consultar: ")
 
     localizar_passageiro = False
-    
+
     for reserva in reservas:
+        
         if reserva.nome_passageiro == nome_passageiro:
             os.system("cls || clear")
             print(f"O passageiro {nome_passageiro} está no avião {reserva.numero_aviao}")
