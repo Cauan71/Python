@@ -16,7 +16,9 @@ def informacoes():
     salario_usuario = float(input("Digite seu Salário Base : "))
     transporte = input("Deseja receber o Vale Transporte (s/n)? ")
     refeicao = float(input("Digite o valor do vale refeição fornecido: "))
-    return salario_usuario, transporte, refeicao
+    dependente = int(input("Digite a quantidade de dependentes: "))
+
+    return salario_usuario, transporte, refeicao,dependente
 
 
 def salario_inss(salario_usuario):
@@ -34,23 +36,55 @@ def salario_inss(salario_usuario):
     
     else:
         return 854.36
+    
+def deducao_inss(salario_usuario):
+    if salario_usuario >= 1100 and salario_usuario < 2203.48:
+        return 21.18
+    
+    if salario_usuario >= 2203.48 and salario_usuario < 3305.22:
+        return 101.18
+    
+    if salario_usuario >= 3305.22 and salario_usuario < 6433.57:
+        return 181.18
+    
+    if salario_usuario < 1100:
+        return 0
 
 
 def salario_irrf(salario_usuario):
-    if salario_usuario <= 1903.98 and salario_usuario < 2826.65:
-        return salario_usuario * 0.075
     
-    elif salario_usuario <= 2826.65 and salario_usuario < 3751.05:
+    if salario_usuario >= 2259.20 and salario_usuario < 2826.65:
+       return salario_usuario * 0.075
+    
+    elif salario_usuario >= 2826.65 and salario_usuario < 3751.05:
         return salario_usuario * 0.15
     
-    elif salario_usuario <= 3751.05 and  salario_usuario < 4664.68:
+    elif salario_usuario >= 3751.05 and salario_usuario < 4664.68:
         return salario_usuario * 0.225
     
     elif salario_usuario >= 4664.68:
         return salario_usuario * 0.275
+
+    else: 
+        return 0   
+
+def deducao(salario_usuario):
+    if salario_usuario >= 2259.20 and salario_usuario < 2826.65:
+       return 169.44
     
+    elif salario_usuario >= 2826.65 and salario_usuario < 3751.05:
+        return 381.44
+    
+    elif salario_usuario >= 3751.05 and salario_usuario < 4664.68:
+        return 662.77
+     
+    elif salario_usuario >= 4664.68:
+        return 896
     else:
-        return 0
+        return 0 
+
+def dependentes(dependente):
+    return dependente* 189.59
 
 
 def transporte(salario_usuario, transporte):
@@ -92,7 +126,7 @@ while True:
             time.sleep(2)
             os.system("cls || clear")
 
-            salario_usuario, transporte_opcao, refeicao = informacoes()
+            salario_usuario, transporte_opcao, refeicao, dependente = informacoes()
             os.system("cls || clear")
 
             print("Exibindo os dados!! ")
@@ -105,19 +139,29 @@ while True:
             print("Senha do Usuário: {}\n".format(senha))
 
             desconto_inss = salario_inss(salario_usuario)
+            desconto_deducao_inss = deducao_inss(salario_usuario)
+            imposto_inss = salario_inss(salario_usuario) - deducao_inss(salario_usuario)
+
             desconto_irrf = salario_irrf(salario_usuario)
+            desconto_deducao = deducao(salario_usuario)
+            desconto_imposto = desconto_irrf - desconto_deducao
+            valor_dependente = dependentes(dependente)
+
             desconto_transporte = transporte(salario_usuario, transporte_opcao)
             desconto_refeicao = vale_refeicao(refeicao)
             desconto_saude = saude()
+            
 
-            salario_final = salario_usuario - desconto_inss - desconto_irrf - desconto_transporte - desconto_refeicao - desconto_saude
+            salario_final = salario_usuario - imposto_inss - desconto_imposto - desconto_transporte - desconto_refeicao - desconto_saude - valor_dependente
 
-            print("Salário Bruto: R$ {:.2f}".format(salario_usuario))
-            print("Desconto INSS: R$ {:.2f}".format(desconto_inss))
-            print("Desconto IRRF: R$ {:.2f}".format(desconto_irrf))
+            print("Salário Bruto: R$ {:.2f}\n".format(salario_usuario))
+            print("Desconto INSS: R$ {:.2f}".format(imposto_inss))
+            print("Desconto IRRF R$ {:.2f}".format(desconto_imposto))
             print("Desconto Vale Transporte: R$ {:.2f}".format(desconto_transporte))
             print("Desconto Vale Refeição: R$ {:.2f}".format(desconto_refeicao))
-            print("Desconto Plano de Saúde: R$ {:.2f}\n".format(desconto_saude))
+            print("Desconto Plano de Saúde: R$ {:.2f}".format(desconto_saude))
+            print("Valor por dependente: {:.2f}\n".format(valor_dependente))
+
             print("Salário Líquido: R$ {:.2f}".format(salario_final))
 
         else:
