@@ -82,14 +82,15 @@ while True:
         
     if opcao == 3:
         for addProduto in lista:
-            print("===== PRODUTO =====")
+            os.system("cls || clear")
+            logo()
+            print("\n===== PRODUTO =====")
             print("Descrição do Produto: {}".format(addProduto.descricao))
             print("Preço: {}".format(addProduto.preco))
             print("Cor: {}".format(addProduto.cor))
             print("Tamanho: {}".format(addProduto.tamanho))
             print("Quantidade: {}\n".format(addProduto.quantidade))
-            time.sleep(10)
-            os.system("cls || clear")
+            
 
     if opcao == 4:
         os.system("cls || clear")
