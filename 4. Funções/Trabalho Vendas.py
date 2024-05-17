@@ -9,11 +9,12 @@ senha_cadastrada = 123
 lista = []
 
 class addProduto:
-    def __init__(self, descricao, tamanho, preco, cor):
+    def __init__(self, descricao, tamanho, preco, cor, quantidade):
         self.descricao = descricao
         self.tamanho = tamanho
         self.preco = preco
         self.cor = cor
+        self.quantidade = quantidade
 
 
 def logo():
@@ -57,13 +58,16 @@ while True:
                 tamanho = input("Digite o tamanho da camisa: ")
                 preco = float(input("Digite o preço :"))
                 cor= input("Digite a cor da camisa: ")
-                lista.append(addProduto(descricao,tamanho,preco,cor))
+                quantidade = int(input("Digite a quantidade desejada: "))
+                lista.append(addProduto(descricao,tamanho,preco,cor,quantidade))
+                os.system("cls || clear")
 
             elif escolha == 2:
                 logo()
                 descricao = input("Digite a descrição do Short: ")
-                tamanho = int(input("Digite o tamanho do Short: EX: 38"))
+                tamanho = int(input("Digite o tamanho do Short( Ex = 38): " ))
                 cor= input("Digite a cor do Short: ")
+                os.system("cls || clear")
 
 
         else:
@@ -73,13 +77,19 @@ while True:
             os.system("cls || clear")
     if opcao == 2:
         logo()
-
+        opcoes_cadastro()
+        escolha = int(input("Escolha a opção desejada : "))    
+        
     if opcao == 3:
         for addProduto in lista:
-            print("Descrição do Produto: ")
-            print("Tamanho")
-            print("")
-            print("")
+            print("===== PRODUTO =====")
+            print("Descrição do Produto: {}".format(addProduto.descricao))
+            print("Preço: {}".format(addProduto.preco))
+            print("Cor: {}".format(addProduto.cor))
+            print("Tamanho: {}".format(addProduto.tamanho))
+            print("Quantidade: {}\n".format(addProduto.quantidade))
+            time.sleep(10)
+            os.system("cls || clear")
 
     if opcao == 4:
         os.system("cls || clear")
