@@ -29,10 +29,10 @@ def opcoes_cadastro():
     print("3 - Sapatos")
     
 def cadastrar_produto(tipo):
-    descricao = input("Digite a descrição da camisa: ")
-    tamanho = input("Digite o tamanho da camisa: ")
+    descricao = input("Digite a descrição do produto: ")
+    tamanho = input("Digite o tamanho : ")
     preco = float(input("Digite o preço :"))
-    cor = input("Digite a cor da camisa: ")
+    cor = input("Digite a cor :")
     quantidade = int(input("Digite a quantidade desejada: "))
     lista.append(addProduto(descricao,tamanho,preco,cor,quantidade,tipo))
     limpar()
@@ -87,9 +87,11 @@ while True:
         if login == login_cadastrado and senha == senha_cadastrada:
             limpar()
             logo()
-            print("Bem Vindo!! ")
+            print("Verificando dados...")
             time.sleep(2)
+            print("Bem - Vindo(a) !! ")
             limpar()
+
             logo()
             opcoes_cadastro()
             escolha = int(input("Escolha a opção que deseja cadastrar: "))
@@ -106,6 +108,7 @@ while True:
                 limpar()
         else:
             limpar()
+            logo()
             print("Login e senha Inválidos, tente novamente...")
             time.sleep(2)
             limpar()
