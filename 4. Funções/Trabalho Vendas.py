@@ -7,6 +7,8 @@ login_cadastrado = "admin"
 senha_cadastrada = 123
 
 lista = []
+cartao = 0.10
+aVista = 0.10
 
 class addProduto:
     def __init__(self, descricao, tamanho, preco, cor, quantidade,tipo):
@@ -19,6 +21,10 @@ class addProduto:
 
 def limpar():
     os.system("cls || clear")
+
+def pagar():
+    print("1 - Á Vista ( 10% de desconto)")
+    print("2 - Cartão de Crédito (10% de acréscimo) ")
 
 def logo():
     print("="*5, "URBAN OUTFIT ", "="*5)
@@ -56,12 +62,43 @@ def comprar_produto():
         quantidade = int(input("Digite a quantidade desejada: "))
         addProduto = lista[escolha]
         
+        limpar()
+        logo()
+        pagar()
+        pagamento = int(input("Digite a forma de pagamento desejada: "))
+
         if quantidade <= addProduto.quantidade:
             custoTotal = addProduto.preco * quantidade
             addProduto.quantidade -= quantidade
-            print(f"Você comprou {quantidade} {addProduto.tipo}. Custo Total : R$ {custoTotal :.2f}")
+
+            if pagamento == 1:
+                desconto = custoTotal * aVista
+                total =  custoTotal - desconto
+
+                limpar()
+                logo()
+                print(f"Você comprou {quantidade} {addProduto.tipo}. Custo Total : R$ {total :.2f}")
+
+            
+            elif pagamento == 2:
+                acrescimo = custoTotal * cartao
+                total = custoTotal + acrescimo
+
+                limpar()
+                logo()
+                print(f"Você comprou {quantidade} {addProduto.tipo}. Custo Total : R$ {total :.2f}")
+                
+
+            else:
+                limpar()
+                logo()
+                print("Opção Inválida, tente novamente...")
+                time.sleep(2)
+                limpar()
+        
         else:
             print("Produto não está disponível no estoque..")
+            
     else:
         print("Opção Inválida, tente Novamente...")
         
