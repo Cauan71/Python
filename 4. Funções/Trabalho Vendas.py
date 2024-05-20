@@ -139,8 +139,9 @@ while True:
     elif opcao == 4:
         os.system("cls || clear")
         logo()
-        print("Finalizando o programa...")
-        time.sleep(3)
+        print("Finalizando o programa...\n")
+        print("Aluno(s): Iuri Cauan\n\t  João Luiz")
+        time.sleep(5)
         break
     else:
         print("Opção inválida. Tente novamente.")
