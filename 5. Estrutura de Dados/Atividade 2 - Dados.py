@@ -15,9 +15,10 @@ class dados:
 livros = 3
 armazenar = []
 
-#
-#
-#
+#git pull
+#git add.
+#git commit - m "Lógica"
+#git push
 
 for i in range(livros):
     informacao = dados(
