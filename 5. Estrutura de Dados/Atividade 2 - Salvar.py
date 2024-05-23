@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 import os
+import time
 
 os.system("cls || clear")
 
@@ -15,9 +16,10 @@ def exibir(arquivo):
     with open(arquivo, 'r') as arquivos:
         for linha in arquivos:
             nome, autor, categoria, preco = linha.strip().split(',')
-            livros.append(Dados(nome=nome, autor=autor, categoria=categoria, preco=float(preco)))
+            livros_Inf.append(Dados(nome=nome, autor=autor, categoria=categoria, preco=float(preco)))
 
-        for i in arquivos:
+        for i in livros_Inf:
+            print("="*5, "S E N A I ", "="*5)
             print(f"Nome: {i.nome}")
             print(f"Autor: {i.autor}")
             print(f"Categoria: {i.categoria}")
@@ -33,6 +35,7 @@ class Dados:
 QUANTIDADE_LIVROS = 1
 arquivo = "Catálogo_Livros.txt"
 livros= []
+livros_Inf = []
 
 print("Solicitando dados: ")
 for i in range(QUANTIDADE_LIVROS):
@@ -45,5 +48,6 @@ for i in range(QUANTIDADE_LIVROS):
     livros.append(livro)
 
 salvar(livros)
-
+time.sleep(2)
+os.system("cls || clear")
 exibir(arquivo)
