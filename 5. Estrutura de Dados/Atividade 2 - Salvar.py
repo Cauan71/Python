@@ -17,13 +17,11 @@ def exibir(arquivo):
             nome, autor, categoria, preco = linha.strip().split(',')
             livros.append(Dados(nome=nome, autor=autor, categoria=categoria, preco=float(preco)))
 
-        for i in livros:
+        for i in arquivos:
             print(f"Nome: {i.nome}")
             print(f"Autor: {i.autor}")
             print(f"Categoria: {i.categoria}")
             print(f"Preço: {i.preco}")
-
-QUANTIDADE_LIVROS = 2
 
 @dataclass
 class Dados:
@@ -32,6 +30,7 @@ class Dados:
     categoria: str
     preco: float
 
+QUANTIDADE_LIVROS = 1
 arquivo = "Catálogo_Livros.txt"
 livros= []
 
