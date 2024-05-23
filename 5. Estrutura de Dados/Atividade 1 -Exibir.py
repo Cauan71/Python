@@ -19,6 +19,7 @@ with open(arquivo , 'r') as arquivos:
         nome, idade, peso, altura = linha.strip().split(',')
         coletar.append(informacoes(nome = nome, idade = int(idade), peso = float(peso) , altura = float(altura)))
 
+
 print("\nExibindo Dados")
 for i in coletar:
     print("===== Usuário =====")
