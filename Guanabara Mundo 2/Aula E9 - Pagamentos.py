@@ -29,7 +29,7 @@ elif pagar == 4:
     parcelas = int(input("Digite a quantidade de parcelas:  "))
     total = valor + (valor * 0.20)
     totalprc = total /parcelas
-    print(f"\nSua Compra sera parcelada em {parcelas} a um valor de {totalprc} mensais! ")
+    print(f"\nSua Compra sera parcelada em {parcelas} vezes, a um valor de {totalprc} mensais! ")
 
 else:
     print("Digite uma opção válida!! ")
