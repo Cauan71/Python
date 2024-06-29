@@ -2,19 +2,24 @@ import os
 
 os.system("cls || clear")
 
-lista = []
-maior_peso:int = 0
-menor_peso:int = 9999
 
-for i in range(2):
+
+maior = 0
+menor = 0
+
+for i in range(1,6):
     peso = float(input("Digite o seu peso: "))
-    lista.append(peso)
 
-    if peso > maior_peso:
-        maior_peso = peso
+    if i == 1:
+        maior = peso
+        menor = peso
+
+    else:
+        if peso > maior:
+            maior = peso
+        if peso < menor:
+            menor = peso
+
     
-    if peso < menor_peso:
-        menor_peso = peso
-
-print("Maior Peso: {}".format(maior_peso))
-print("Menor Peso: {}".format(menor_peso))
+print("Maior Peso: {}".format(maior))
+print("Menor Peso: {}".format(menor))
