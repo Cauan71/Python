@@ -8,9 +8,8 @@ fat = 1
 
 while c > 0:
     print("{}".format(c))
-    print(" x " if c > 1 else "=", end="")
     fat*= c
     c -= 1
 
-print("{}".format(f))
+print("{}".format(fat))
 
