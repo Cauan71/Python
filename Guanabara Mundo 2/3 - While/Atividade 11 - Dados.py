@@ -2,32 +2,33 @@ import os
 
 os.system("cls || clear")
 
-contador_idade = 0
-contador_sexo = 0
-mulheres_cont = 0
+cont_idade = cont_mulher = cont_homem = 0
+sexo = "F"
 
-opcao = "S"
-
-while opcao == "S":
-    print("="*5,"Curso em Vídeo","="*5)
+while True:
     nome = str(input("\nDigite seu nome: "))
     idade = int(input("Digite sua idade: "))
-    sexo = str(input("Digite seu sexo [ M / F ]: ")).upper().strip()[0]
 
-    opcao = str(input("Deseja continuar [ S / N ]? ")).upper().strip()[0]
-    
-    os.system("cls || clear")
+    while sexo not in "MF":
+        sexo = str(input("Informe seu sexo [ M / F ]: ")).upper().strip()[0]
+        
 
-    if idade > 18:
-        contador_idade += 1
-
+    if idade >= 18:
+        cont_idade += 1
     if sexo == "M":
-        contador_sexo += 1
-
+        cont_homem
     if sexo == "F" and idade < 20:
-        mulheres_cont += 1 
+        cont_mulher += 1
 
-print("="*5," RESULTADO ", "="*5)
-print("Pessoas com mais de 18 anos: {}".format(contador_idade))
-print("Quantidade Homens cadastrados: {}".format(contador_sexo))
-print("Quantidade de mulheres abaixo de 20 anos: {}".format(mulheres_cont))
+    opcao = ''
+
+    while opcao not in "SN":
+        opcao = str(input("Deseja continuar? [ S / N ]: "))
+
+    if opcao == "N":
+        break
+
+print("Pessoas acima de 18 anos: {}".format(cont_idade))
+print("Homens Cadastrados: {}".format(cont_homem))
+print("Mulheres abaixo de 20 anos: {}".format(cont_mulher))
+
