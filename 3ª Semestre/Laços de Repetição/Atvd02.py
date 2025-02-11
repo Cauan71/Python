@@ -16,4 +16,4 @@ for i in range(10):
 nomeSorteado = random.choice(nomes)
 limpar()
 time.sleep(3)
-print(f"Nome Sorteado : {nomeSorteado.capitalize}")
+print(f"Nome Sorteado : {nomeSorteado.capitalize()}")
