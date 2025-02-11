@@ -16,7 +16,7 @@ limpar()
 numeroSorteado = random.randint(1,100)
 
 while True:
-    valor = int(input("Digite um número: "))
+    valor = int(input("Digite um número entre 1 a 100: "))
     contador = contador + 1
 
     
