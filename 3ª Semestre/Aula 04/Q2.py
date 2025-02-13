@@ -15,6 +15,7 @@ while True:
     
     if numero > 0:
         soma += numero
+        # somatorio = sum(valores)
          
     elif numero == 0:
         os.system("cls || clear")
