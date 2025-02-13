@@ -15,7 +15,9 @@ for i in range(3):
         
     if numero < menorNumero:
         menorNumero = numero
-        
+
+# maiorNumero = max(numeros)
+# menorNumero = min(numeros)
     
     
     
