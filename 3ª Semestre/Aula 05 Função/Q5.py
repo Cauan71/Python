@@ -1,27 +1,21 @@
-# Função 
-
 import os
+
 def limpar():
     os.system("cls || clear")
 
+limpar()
 
-def calcular(q,d):
-    formula_KM = 0.15*km
-    formula_dia = 60*dias
 
-    total = formula_dia+formula_KM
+num1 = int(input("Digite um número: "))
+num2 = int(input("Digite outro número: "))
 
-    return total
-
+# Determinando qual o MENOR e MAIOR número: 
+inicio = min(num1,num2) 
+fim = max(num1, num2)
 
 limpar()
-km = int(input("Digite a quantidade de KM Percorridos: "))
-dias = int(input("Digite a quantidade de Dias Usado: "))
-
-
-totalF = calcular(km,dias)
-
-
-print("===== TOTAL =====")
-print(f"Valor da Viagem: {totalF}")
+# Exibindo Resultado
+print(f"Números entre {inicio} e {fim}: ")
+for i in range(inicio +1, fim):
+    print(i, end = " ")
 
