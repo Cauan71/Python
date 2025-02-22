@@ -15,8 +15,9 @@ numeros = [12,21,2,23,33,45]
 # Sum - Soma todos os valores do vetor
 # Max - Maior valor de um vetor
 # Min - Menor valor de um vetor
-# Random - 
+# Random - Gera números aleatórios 
 # Reverse - Inverter um Vetor
+# SET - Crie um conjunto (coleção de elementos únicos, sem ordem definida).
 
 
 # --------------------------------------------
