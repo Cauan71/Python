@@ -20,8 +20,9 @@ dias = int(input("Digite a quantidade de Dias Usado: "))
 
 
 totalF = calcular(km,dias)
+limpar()
 
 
 print("===== TOTAL =====")
-print(f"Valor da Viagem: {totalF}")
+print(f"Valor da Viagem: R$ {totalF:.2f}")
 
