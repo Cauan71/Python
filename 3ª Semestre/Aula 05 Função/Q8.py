@@ -11,6 +11,8 @@ registro = [4,5,6,7,8,9]
 limpar()
 
 lista3 = list(set(lista+registro))
-
+print("Analisando.......")
+time.sleep(3)
+limpar()
 print(f"Novos Números: {lista3}")
    
