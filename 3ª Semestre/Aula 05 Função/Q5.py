@@ -17,5 +17,5 @@ limpar()
 # Exibindo Resultado
 print(f"Números entre {inicio} e {fim}: ")
 for i in range(inicio +1, fim):
-    print(i, end = " ")
+    print(i, end= " ")
 

@@ -34,7 +34,7 @@ novo_salario = salario_colab+valor_aumento
 
 limpar()
 print("===== MENU =====")
-print(f"Salário Antes do Reajuste: {salario_colab}")
-print(f"Percentual Aplicado: {percentual}")
-print(f"Valor do Aumento: {valor_aumento}")
-print(f"Novo Salário: {novo_salario}")
+print(f"Salário Antes do Reajuste: {salario_colab:.1f}")
+print(f"Percentual Aplicado: {percentual}%")
+print(f"Valor do Aumento: {valor_aumento:.1f}")
+print(f"Novo Salário: {novo_salario:.1f}")
