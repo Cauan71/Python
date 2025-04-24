@@ -50,34 +50,37 @@ def del_contatos():
 #------------------------------------Janela--------------------------------        
 ctk.set_appearance_mode('dark')
 janela = ctk.CTk()
-janela.geometry('550x650')
+janela.geometry('950x700')
 janela.title('Agenda de Contatos')
 janela.resizable(False,False)
 
 #----------------------------------------------------------------------
+
+ctk.CTkLabel (janela, text="Agenda de Contatos", font=("Verdana", 24,"bold"), text_color="White").pack(pady=20)
+
 nome = ctk.CTkEntry(janela,
-                    width=320,
+                    width=260,
                     height=40,
-                    border_color='hotpink',
+                    border_color='#4912df',
                     placeholder_text='Informe seu nome')
-nome.pack(pady=10)
+nome.place(x=40,y = 120)
 
 telefone = ctk.CTkEntry(janela,
-                    width=320,
+                    width=260,
                     height=40,
-                    border_color='hotpink',
+                    border_color='#4912df',
                     placeholder_text='Informe seu Telefone')
-telefone.pack(pady=10)
+telefone.place(x= 320 , y = 120)
 
-email = ctk.CTkEntry(janela,
-                    width=320,
+email = ctk.CTkEntry(janela,    
+                    width=260,
                     height=40,
-                    border_color='hotpink',
+                    border_color='#4912df',
                     placeholder_text='Informe seu Email')
-email.pack(pady=10)
+email.place(x= 600, y = 120)
 
 adcionar = ctk.CTkButton(janela,
-                      width=100,
+                      width=180,
                       height=40,
                       fg_color='blue',
                       hover_color='#1E8CE6',
@@ -87,10 +90,10 @@ adcionar = ctk.CTkButton(janela,
                       font=('arial',13,'bold'),
                       command=add_contato)
 
-adcionar.place(x=115,y=200)
+adcionar.place(x=205,y=200)
 
 excluir = ctk.CTkButton(janela,
-                      width=100,
+                      width=180,
                       height=40,
                       fg_color='red',
                       hover_color='darkred',
@@ -99,21 +102,19 @@ excluir = ctk.CTkButton(janela,
                       cursor='hand2',
                       font=('arial',13,'bold'),
                       command=del_contatos)
-excluir.place(x=335,y=200)
+excluir.place(x=520,y=200)
 
 
 lista_contatos = Listbox(janela,
-                         width=46,
+                         width=82,
                          height=20,
-                         font=('verdana',12,'bold'),
+                         font=('verdana',12),
                          background='#363636',
-                         highlightbackground='hotpink',
+                         highlightbackground='#4912df',
                          highlightthickness=2,
                          fg='white')
-lista_contatos.place(x=20,y=250)
+lista_contatos.place(x=20,y=270)
 
 
 carregar_contatos()
 janela.mainloop()
-
-# python -m auto_py_to_exe para converter em exe
