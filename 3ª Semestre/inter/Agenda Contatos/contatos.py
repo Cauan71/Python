@@ -115,3 +115,5 @@ lista_contatos.place(x=20,y=250)
 
 carregar_contatos()
 janela.mainloop()
+
+# python -m auto_py_to_exe para converter em exe
